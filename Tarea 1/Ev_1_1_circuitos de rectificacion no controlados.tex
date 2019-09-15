@@ -1,0 +1,222 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\graphicspath{garabito/}
+
+\begin{document}
+
+\begin{center}
+\textbf{REPORTE DE INVESTIGACION}\\
+CARACTERISTICAS DE LOS CONVERTIDORES DE POTENCIA
+\emph{CA,CD CA,CA CD,CD Y CD,CA}
+\end{center}
+
+\begin{center}
+Maria de Lourdes Gomez Islas\\
+17-sep-2019\\
+Universidad Politecnica de La Zona Metropolitana de Guadalajara
+\end{center}
+
+\part{Introduccion}
+Los convertidores son productos usados para convinar caracteristicas de la tension y de la corriente que reciben, transformando de manera perfecta para su uso especifico donde va a ser utilizada esta.
+\part{Objetivo}
+Conocer las caracteristicas de los convertidores de potencia, conociendo las ramas en las que se dividen cada una de ellas.
+
+\section{DE CONVERTIDORES CD,CD (CC,CC)}
+ 
+\subsection{Regulador Reductor}
+En este convertidor la unica caracteristica es que voltaje de entrada sera siempre mayor al voltaje de salida, por eso el regulador reeductor trabaja en dos modos: el  primero  empieza  en  el  momento  que  el  transistor  se  activa desde cero al  circuito  por  medio    del control.La corriente de entrada corre y carga ala bobina, el capacitor y la resistencia.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../reductor.png} 
+\caption{Regulador reductor}
+\end{figure}
+
+\subsection{Regulador Elevador}
+Como en este caso tiene el regulador elevador relacion semejante al del reductor solo que en esta ocacion la salida de voltaje trabaja de manera distinta ya que el voltaje de entrada sera menor que el de salida. Tambien trabaja en dos modos:\begin{enumerate}
+\item Se activa el transistor desde cero y la corriente fluye a la bobina y al transistor.
+\item Se desconecta el transistor y la corriente que estaba inlfuyendo a la bobina y el transistor ahora fluye en la bobina, el capacitor, el diodo y la resistencia. 
+\end{enumerate} 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../Elevador.png} 
+\caption{Regulador Elevador} 
+\end{figure}
+
+\subsubsection{Regulador Cuk}
+En El \textbf{regulador Cuk} , el voltaje de salida es menos o mayor que el voltaje de entrada, solo que la polaridad de voltaje de salida es opuesta al de la entrada. De igual manera trabaja de 2 maneras:\begin{enumerate}
+\item se activa el transistor y la corriente se eleva en la bobina, el voltaje del capacitor polariza inversamente al diodo y lo desactiva descargando su energía en C1,  C2, L2 y la resistencia.
+\item se desconecta el transistor cargándose el capacitor a partir del vol. de entrada y la energia almacenada en la bobina se va a la resistencia. 
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{../Cuk.png} 
+\caption{Regulador Cuk} 
+\end{figure}
+
+\subsection{Relevador Reductor-Elevador}
+Tal y como el voltaje de salida y entrada del funcionamiento Cuk, el \textbf{regulador reductor elevador} el voltaje de salida puede ser mayor o menor al voltaje de entrada y la polaridad del voltaje de entrada es inversa al voltaje de salida. Tambien trabaja de 2 modos:\begin{enumerate}
+\item El transistor se activa y el diodo bloquea el paso de corriente.  De esa forma la corriente corre a traves de la bobina y el transistor.
+\item Se desactiva el transistor y la energía en la bobina se descarga en el capacitor, el diodo y la resistencia. 
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{../reductorelevador.png} 
+\caption{Relevador Reductor-Elevador} 
+\end{figure}
+
+\subsubsection{Flyback}
+Es un convertidor DC a DC con aislamiento galvánico entre entrada y salida. Tiene la misma estructura que un convertidor Buck-Boost con dos bobinas acopladas en lugar de una única bobina. Trabaja de 2 modos:\begin{enumerate}
+\item Con el interruptor activado, la bobina L1 está conectada directamente al voltaje. Esto provoca un incremento del flujo magnético. El voltajede entrada es negativa, por lo que el diodo está en inversa. El condensador de salida es el único que proporciona energía a la carga.
+\item Con el interruptor cerrado la energía almacenada en el núcleo magnético es transferida a la carga y al condensador de salida.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=5cm]{../flyback.png} 
+\caption{Flyback} 
+\end{figure}
+
+\subsection{Relevador Buck}
+Este tipo de convertidor genera una tension (\emph{voltaje}) de salida menor ya sea igual o mayor que el de salida pero con polaridad invertida. Su forma de actuar es a traves del ciclo de trabajo en el interruptor de potencia se regula la tension de salida. 
+ 
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{../buck.png}   
+\caption{Relevador Buck} 
+\end{figure}
+
+\subsubsection{Relevador Push-Pull}
+trabaja en el 1er y 3er cuadrante. El transformador se magnetiza y se desmagnetiza en un periodo. Está compuesto por una especie de inversor que convierte el voltaje de corriente continua en alterna utilizando dos transistores y un rectificador de onda completa y un filtro paso bajo.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=11cm]{../pushpull.png}    
+\caption{Convertidor Push-Pull} 
+\end{figure}
+
+\subsubsection{Forward}
+El convertidor directo aislado es conformado básicamente con la llave Sw conectada al arrollamiento y su secundario que vincula la salida del convertidor. A diferencia del  convertidor  flyback,  es  necesario  disponer  de  un  tercer  arrollamiento  N3  para  descargar la energía de magnetización del transformador. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../forward.png}     
+\caption{Forward} 
+\end{figure}
+
+\section{Convertidor de CD,CA}
+
+\subsection{Relevador Trifasico}
+Son utilizados para la alimentación de cargas trifásicas que necesiten corriente alterna. Los caracterizan 3 tipos de aplicaciones:\begin{enumerate}
+\item Fuentes de voltaje alterna trifásica pero sin interrupciones.
+\item Puesta en marcha de motores de corriente alterna trifásicos.
+\item Conexión de fuentes que producen energía continua con las cargas trifásicas.                     
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../trifasico.png}     
+\caption{Convertidor Trifasico} 
+\end{figure}
+
+\subsubsection{Modo Estrella}
+dentro del convertidor trifasico, en los cuales se inducen los voltajes de linea, se pueden conectar mediante dos formas principales: delta (Δ) y estrella (Y). Y asi se mira:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{../estrella.png}    
+\caption{Modo Estrella} 
+\end{figure}
+
+\subsubsection{Modo Delta}
+Por otro lado, la conexion delta está formada por tres devanados asimilando a la letra  griega, Se mira como:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../Delta.png}     
+\caption{Modo Delta} 
+\end{figure} 
+
+
+\subsection{Relevador Monofasico}
+\subsubsection{Topologia}
+Esta  topología se basa en la conexión en serie de \textbf{Relevadores  monofásicos} con fuentes de alimentación independientes. Cada inversor monofásico en puente completo  genera tres tensiones a su salida.
+
+\subsubsection{Inversor de Medio Puente}
+Considerando que el capacitor 1 y capacitor 2 estan cargados a la mitad del voltaje Vs, tal como se observa en los  capacitores. Para la forma de onda del inversor de  medio  puente en la primera mitad del periodo se obtendrá un voltaje con forma de onda  cuadrada, para la segunda parte del periodo se polariza de forma inversa.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=3cm]{../inversormediopuente.png}      
+\caption{Inversor de Medio Puente} 
+\end{figure} 
+
+\subsubsection{Control de un inversor de medio puente}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{../tabla.png}     
+\caption{Control de un inversor de medio puente} 
+\end{figure} 
+
+\section{Convertidor CA,CA}
+
+\subsection{Convertidor Matricial}
+Es el control de los interruptores bi-direccionales que operan a alta frecuencia. Estos son controlados de tal manera que  el \textbf{Convertidor matricial} puede suministrar  a la carga un voltaje de amplitud y frecuencia variables. Los interruptores estan  dispuestos de tal manera que cualquiera de laslíneas de salida puede ser conectada a cualquiera de las líneas de entrada.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6cm]{../convertidormatricial.png}    
+\caption{Convertidor Matricial} 
+\end{figure} 
+
+\subsection{Cicloconvertidor}
+Durante el intervalo t3-t5 la corriente en la carga es negativa, siendo esta  suministrada por el rectificador negativo (ánodos unidos).\\
+Por tanto durante este intervalo el voltaje de salida será igual a Ud2.Tambien trabaja de 2 modos:\begin{enumerate}
+\item Desde t3 a t4 :Ud2 es positiva, lo cual indica el funcionamiento del rectificador 2 en  modo rectificador.
+\item Desde t4 a t5 :Ud2 es negativa, funcionando el rectificador 2 como ondulador.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../cicloconvertidor.png}   
+\caption{Cicloconvertidor} 
+\end{figure} 
+
+\section{Convertidor CA.CD}
+\subsection{Controlado}
+Los controlados emplean el tiristor como dispositivo de control.\\
+El tiristor es un semiconductor que presenta dos estados estables: en uno conduce, y en otro está en corte(bloqueo directo, bloqueo inverso y conducción directa).\\
+El objetivo del tiristor es retardar la entrada en conducción del mismo, ya que como se sabe, un tiristor se hace conductor no solo cuando el voltaje en sus bornes se hace positiva (tensión de anodo mayor que el voltaje del catodo), sino cuando siendo esta tension positiva, se envia un impulso de cebado a puerta.\\
+En los rectificadores controlados se controla el cebado del tiristor y su bloqueo es normalmente natural.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../controlado.png}   
+\caption{Controlado} 
+\end{figure} 
+
+\subsection{No Controlado}
+Trabajan de 3 modos:\begin{enumerate}
+\item Los  diodos  D1  y  D2  conducen  alternativamente.  La  corriente  por  la  carga  siempre es positiva.
+\item El votaje  maximo  en  un  diodo  polarizado  en  inversa  es  el  doble  del  valor  de pico de la tensión de cada secundario.
+\item La  corriente  por  el  primario  circula  en  los  dos  semiciclos  y  tiene  un  valor  medio nulo.
+\end{enumerate}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{../nocontrolados:).png}    
+\caption{No Controlado} 
+\end{figure} 
+
+\begin{thebibliography}
+(fotovoltaico.galeon) Convertidores CA,CC.\\
+(catarina.udlap) Convertidores de Potencia.\\
+(pluginfile.php) Convertidores Electronicos de Potencia.\\
+(catarina.udlap) Convertidores de CA,CD y CD,CA.
+\end{thebibliography} 	
+ 	
+\end{document}
