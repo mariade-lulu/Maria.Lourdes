@@ -1,0 +1,100 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\begin{document}
+\begin{center}
+\textbf{REPORTE DE PRACTICA}\\
+CIRCUITOS DE RECTIFICACION NO CONTROLADOS
+\end{center}
+
+\begin{center}
+Maria de Lourdes Gomez Islas\\
+12-sep-2019\\
+Universidad Politecnica de La Zona Metropolitana de Guadalajara
+\end{center}
+
+\section{Objetivo de la practica}
+Saber el funcionamiento de cada rectificador y cuales caracteristicas las diferencian entre cada una de ellas.
+
+\section{Procedimiento}
+\subsection{Rectificador de media onda con carga inductiva}
+Esta nos permite poner de manifiesto algunos de los conceptos elementales de rectificacion no controlada:
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=4.5cm]{../Rectificadordemediaonda.png} 
+\caption{Rectificador de media onda con carga RL}
+\end{figure}
+
+Ya teniendo la simulacion en orcad, en la siguiente figura se mjestra como la onda de la tension rectificada se aplica a la carga.\\
+Como se observa, la tension de salida no se anula hasta que no lo hace la corriente de carga, lo que significa que el diodo rectificador permanece polarizado en directo incluso durante una porcion del semiperiodo negativo de la tension de entrada.\\
+\newpage Esto es debido a que la indutancia de salida se opone a variaciones bruscas de corriente y asi crea una sobretension necesaria para mantener al diodo en conduccion hasta que la corriente sea nula.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{../simulacionOnda1.png} 
+\caption{Tensiones de entrada y de salida del rectificador}
+\end{figure}
+
+\subsection{Tension y corriente en el diodo rectificador}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{../ONDA3.png} 
+\caption{Tension y corriente en el diodo rectificador}
+\end{figure}
+
+\subsection{Tension en el diodo rectificador}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8cm]{../ONDA2.png}  
+\caption{Tension en el diodo rectificador}
+\end{figure}
+
+Es necesario poner en PSPICE las caracteristicas que tiene cada una de las ondas que vienen en el manual de practica.
+
+\subsection{Rectificador monofasico en puente}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../rectificadormonofasico.png}  
+\caption{Rectificador de media onda con carga RL}
+\end{figure}
+
+
+El rectificador monofasico o puente de diodos, la etapa de continua consta de un filtro constituido por los elementos Cf y Lf , destinado a atenuar el rizado de la tension de salida. En la etapa de alterna se han añadido los elementos Rr y Lr para tener en cuenta la resistencia y la inductividad de la red vistas desde el rectificador.\\
+En este circuito podremos estudiar las principales formas de ondas que caracterian su funcionamiento y determinan la eleccion de los diodos empeorando el factor de potencia.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{../tensiondesalidaderectificador0.png} 
+\caption{Tension de salida del rectificador}
+\end{figure}
+
+\subsection{Tension y corriente de entrada del rectificador}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=9cm]{../ONDA1S.png} 
+\caption{Tension y corriente de entrada del rectificador}
+\end{figure}
+
+\subsubsection{Distorcion de la corriente de entrada}
+Los resultados del analisis de Fourier permiten dibujar en \emph{Probe} la componnte fundamental de la corriente de entrada y la corriente de distorcion, definida como la diferencia entre la forma real y la correspondiente a la componente fundamental.\\
+\\
+Para eso, utilizando los operadores de \emph{Probe} introduciremos la siguiente ecuacion:
+
+$$ i1 = 51.67 * sin(314*time + 0.069) $$
+
+donde por coherencia con el resto de unidades, el valor de alpha1 debe introducirse en radianes y no en grados.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=13cm]{../ONDA5S.png} 
+\caption{Distorcion de la corriente de entrada}
+\end{figure}
+
+\end{document}
